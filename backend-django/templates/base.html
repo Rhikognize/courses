@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>
+        {%block title%}
+        {%endblock%}
+    </title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class = "container">
+            <a href={%url "shop:index"%} class="navbar-brand">Courses shop</a>
+        </div>
+        <span class='navbar-text'>
+            <a href="admin" class = 'me-5' target = '_blank'>Admin</a>
+            <a href="api/v1" class = 'me-3' target = '_blank'>API</a>
+        </span>
+    </nav>
+    <main class='container'>
+        {%block header%}
+        {%endblock%}
+        {% block content %}
+        {%endblock%}
+        {%block content1%}
+        {%endblock%}
+    </main>
+
+
+</body>
+</html>

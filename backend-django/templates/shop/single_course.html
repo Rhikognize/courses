@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Course  '{{course.title}}'
+{%endblock%}
+
+{%block header%}
+<h1 class='mt-5'>Welcome to {{course.title}} !</h1> 
+{%endblock%}
+{%block content%}
+<h2>Course category : {{course.category}}</h2>
+<p>Course price : {{course.price}}</p>
+<p>Course students quantity : {{course.students_qty}}</p>
+<p>Course review quantity : {{course.reviews_qty}}</p>
+<button class="btn btn-primary">Buy</button>
+{%endblock%}
