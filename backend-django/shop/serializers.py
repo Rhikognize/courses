@@ -3,7 +3,6 @@ from .models import *
 
 
 class CourseSerializer(serializers.ModelSerializer):
-    category = serializers.StringRelatedField()
 
     class Meta:
         model = Course

@@ -11,13 +11,11 @@ class ReactView_Course(APIView):
     serializer_course = CourseSerializer
 
     def get(self, request):
-        courses = Course.objects.all()
-        serializer = CourseSerializer(courses, many=True)
-        # detail = [{"title": detail.title, "price": detail.price,
-        #            "category": detail.category,
-        #            "students_qty": detail.students_qty}
-        #           for detail in Course.objects.all()]
-        return Response(serializer.data)
+        detail = [{"id": detail.id, "title": detail.title, "price": detail.price,
+                   "category": str(detail.category),
+                   "students_qty": detail.students_qty}
+                  for detail in Course.objects.all()]
+        return Response(detail)
 
     def post(self, request):
 
