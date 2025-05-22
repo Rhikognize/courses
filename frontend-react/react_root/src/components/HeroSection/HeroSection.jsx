@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import '../App.css';
-import { Button } from './button';
+import '../../App.css';
+import { Button } from '../Button/button';
 import './HeroSection.css';
-import CourseCarousel from './CourseCarousel'; 
+import CourseCarousel from '../CourseCarousel/CourseCarousel'; 
 
 function HeroSection() {
 
