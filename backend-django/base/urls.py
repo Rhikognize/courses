@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('shop.urls')),
     path('api/', include('api.urls')),
-    path('wel/', ReactView_Course.as_view(), name="something")
+    path('wel/', ReactView_Course.as_view(), name="something"),
+    path('api/', include('authapp.urls')),
 ]

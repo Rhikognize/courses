@@ -1,0 +1,105 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources: {
+      EN: {
+        translation: {
+          welcome: "Welcome",
+          description: "Start programming!",
+          getStarted: "GET STARTED",
+          about: "About STAS.CORPORATION",
+          hello: "Hello",
+          home: "Home",
+          services: "Services",
+          products: "Products",
+          login_link: "Login",
+          export: "Export",
+          title: "Title",
+          price: "Price",
+          students : "Students",
+          category : "Category",
+          username : "Username",
+          password : "Password",
+          login : "LOGIN",
+          admin : "Admin",
+          register_link: "Dont have an account? Register!!!!!!!!",
+          descr_1: "Learn the fundamentals of Python including functions, external modules etc.",
+          descr_2: "Learn the fundamentals of Node.js including asynchronous programming, working with modules, and building server-side applications.",
+          descr_3: "Learn the fundamentals of React including components, state management, hooks, and building interactive user interfaces.",
+          descr_4: "Learn how to use Visual Studio Code for coding, debugging, and managing projects with extensions, integrated terminal, and version control.",
+          descr_5: "Learn the fundamentals of C++ including object-oriented programming, memory management, and efficient algorithm implementation.",
+          hot_courses: "Hot Courses",
+        },
+      },
+      RO: {
+        translation: {
+          welcome: "Bun venit",
+          description: "Începe să programezi!",
+          getStarted: "ÎNCEPE",
+          about: "Despre STAS.CORPORATION",
+          hello: "Salut",
+          home: "Acasa",
+          services: "Servicii",
+          products: "Produse",
+          login_link: "Logare",
+          export: "Export",
+          title: "Titlu",
+          price: "Preț",
+          students : "Studenți",
+          category : "Categorie",
+          username : "Nume",
+          password : "Parola",
+          login : "LOGARE",
+          admin : "Administrator",
+          register_link: "Nu ai cont? Înregistrează-te !!!!!!!!",
+         descr_1: "Învață elementele de bază ale limbajului Python, inclusiv funcții, module externe etc.",
+         descr_2: "Învață elementele de bază ale Node.js, inclusiv programarea asincronă, lucrul cu module și dezvoltarea aplicațiilor pe partea de server.",
+         descr_3: "Învață elementele de bază ale React, inclusiv componente, gestionarea stării, hooks și crearea interfețelor interactive.",
+         descr_4: "Învață cum să folosești Visual Studio Code pentru scrierea codului, depanare și gestionarea proiectelor cu extensii, terminal integrat și control al versiunilor.",
+         descr_5: "Învață elementele de bază ale limbajului C++, inclusiv programarea orientată pe obiecte, gestionarea memoriei și implementarea eficientă a algoritmilor.",
+         hot_courses: "Cursuri populare",
+
+        },
+      },
+      RU: {
+        translation: {
+          welcome: "Добро пожаловать!",
+          description: "Начни программировать!",
+          getStarted: "Начни!",
+          about: "О STAS.CORPORATION",
+          hello : "Привет",
+          home: "Домой",    
+          services: "Сервисы",
+          products: "Продукты",
+          login_link: "Авторизация",
+          export: "Экспорт",
+          title: "Название",
+          price: "Цена",
+          students : "Студенты",
+          category : "Категория",
+          username : "Имя",
+          password : "Пароль",
+          login : "АВТОРИЗАЦИЯ",
+          admin : "Администратор",
+          register_link: "Нет аккаунта?? Зарегистрируйся !!!!!!!!",
+           descr_1: "Изучите основы Python, включая функции, внешние модули и т.д.",
+           descr_2: "Изучите основы Node.js, включая асинхронное программирование, работу с модулями и создание серверных приложений.",
+           descr_3: "Изучите основы React, включая компоненты, управление состоянием, хуки и создание интерактивных пользовательских интерфейсов.",
+           descr_4: "Научитесь использовать Visual Studio Code для написания кода, отладки и управления проектами с расширениями, встроенным терминалом и системой контроля версий.",
+           descr_5: "Изучите основы C++, включая объектно-ориентированное программирование, управление памятью и эффективную реализацию алгоритмов.",
+          hot_courses: "Популярные курсы",
+        },
+      },
+    },
+    fallbackLng: 'EN',
+    interpolation: {
+      escapeValue: false,
+    },
+  });
+
+export default i18n;

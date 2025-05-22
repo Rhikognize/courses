@@ -1,0 +1,100 @@
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.search-filter-panel {
+  margin-bottom: 40px;
+}
+
+.search-sort-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  flex-direction: row; 
+}
+
+.search-input {
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: 1px solid var(--bg-color);
+  border-radius: 6px;
+  min-width: 280px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.sort-label {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-color);
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;   /* Запретить перенос текста */}
+
+.sort-select {
+  padding: 8px 12px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: 1px solid var(--bg-color);
+  min-width: 160px;
+  width: 100%; /* чтобы занимать всю ширину контейнера */
+  max-width: 250px; /* ограничение максимальной ширины */
+  box-sizing: border-box;
+}
+
+.sort-select:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.courses-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.course-card {
+  background: var(--bg-color);
+  border-radius: 8px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.course-card h2 {
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: var(--tc-slide);
+}
+
+
+@media (max-width: 768px) {
+  .course-card{
+    width: 150px;
+  }
+  .sort-select {
+    min-width: 100px;
+    font-size: 1rem;
+  }
+  .search-sort-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;}
+}
