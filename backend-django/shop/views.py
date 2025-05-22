@@ -66,12 +66,9 @@ def export_courses_excel(request):
             user.username,
             user.email
         ])
-    # Сохраняем в BytesIO
     output = BytesIO()
     workbook.save(output)
     output.seek(0)
-
-    # Создаём HTTP-ответ
     response = HttpResponse(
         output.read(),
         content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
