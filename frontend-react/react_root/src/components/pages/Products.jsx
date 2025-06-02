@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';  // импортируем навигацию
-import { validateUser } from '../../authservice';    // импортируем функцию проверки пользователя
+import { useNavigate } from 'react-router-dom';
+import { validateUser } from '../../authservice'; 
 import './Products.css';
+import { useTranslation } from 'react-i18next';
 
 export default function Products() {
   const [courses, setCourses] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortMethod, setSortMethod] = useState('id');
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -51,28 +53,28 @@ export default function Products() {
   return (
     <div className="products-container">
       <div className="search-filter-panel">
-        <h1 className="page-title">Find what you want!</h1>
+        <h1 className="page-title">{t('products_title')}</h1>
 
         <div className="search-sort-row">
           <input
             type="text"
-            placeholder="Search by course title..."
+            placeholder={t('search_placeholder')}
             value={searchTerm}
             onChange={e => setSearchTerm(e.target.value)}
             className="search-input"
           />
 
           <label className="sort-label">
-            Sort by:
+            {t('sort_by')}:
             <select
               value={sortMethod}
               onChange={e => setSortMethod(e.target.value)}
               className="sort-select"
             >
               <option value="id">ID</option>
-              <option value="alphabet">Alphabetical</option>
-              <option value="reviews">Reviews</option>
-              <option value="price">Price</option>
+              <option value="alphabet">{t('alphabet')}</option>
+              <option value="reviews">{t('reviews')}</option>
+              <option value="price">{t('price_pr')}</option>
             </select>
           </label>
         </div>
@@ -89,10 +91,10 @@ export default function Products() {
               title="Click to open course"
             >
               <h2>{course.title}</h2>
-              <p><strong>Price:</strong> {course.price}$</p>
-              <p><strong>Students:</strong> {course.students_qty}</p>
-              <p><strong>Category:</strong> {course.category}</p>
-              <p><strong>Reviews:</strong> {course.reviews_qty}</p>
+              <p><strong>{t('price')}:</strong> {course.price}$</p>
+              <p><strong>{t('students')}:</strong> {course.students_qty}</p>
+              <p><strong>{t('category')}:</strong> {course.category}</p>
+              <p><strong>{t('reviews2')}:</strong> {course.reviews_qty}</p>
             </div>
           ))
         ) : (

@@ -5,8 +5,8 @@ const languages = ['EN', 'RO', 'RU'];
 
 function LanguageSwitcher() {
   const { i18n } = useTranslation();
-  const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'EN');
-
+  const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'EN')
+  
   useEffect(() => {
     localStorage.setItem('language', language);
     document.documentElement.lang = language;

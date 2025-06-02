@@ -11,9 +11,9 @@ function Footer() {
       <div className="footer-content">
         <p>&copy; 2025 {t('All rights reserved')} | Stas's corp</p>
         <div className="footer-links">
-          <Link to="/about">{t('About')}</Link>
-          <Link to="/contact">{t('Contact')}</Link>
-          <Link to="/privacy">{t('Privacy')}</Link>
+          <Link to="/about">{t('about')}</Link>
+          <Link to="/contact">{t('contact')}</Link>
+          <Link to="/privacy">{t('privacy')}</Link>
         </div>
       </div>
     </footer>

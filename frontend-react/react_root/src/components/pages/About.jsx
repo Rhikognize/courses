@@ -6,8 +6,8 @@ function About() {
 
   return (
     <div className="page-container">
-      <h1>{t('About')}</h1>
-      <p>{t('This project was created to demonstrate a simple React application with internationalization.')}</p>
+      <h1>{t('about')}</h1>
+      <p>{t('about_text')}</p>
     </div>
   );
 }

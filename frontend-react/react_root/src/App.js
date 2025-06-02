@@ -11,9 +11,9 @@ import './components/i18n';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Privacy from './components/pages/Privacy';
+import CourseUnavailable from './components/pages/CourseUnaivalable';
 
 function App() {
-
   const [username, setUsername] = useState(localStorage.getItem('username') || 'Guest');
 useEffect(() => {
   const checkUser = async () => {
@@ -21,7 +21,7 @@ useEffect(() => {
     if (validUsername) {
       setUsername(validUsername);
     } else {
-      setUsername('Guest');
+      setUsername('');
       localStorage.removeItem('username');
       localStorage.removeItem('access_token');
       localStorage.removeItem('refresh_token');
@@ -43,6 +43,7 @@ useEffect(() => {
           <Route path="/about" element={<About/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/privacy" element={<Privacy/>} />
+          <Route path="/products/:slug" element={<CourseUnavailable />} />
         </Routes>
       </Router>
 

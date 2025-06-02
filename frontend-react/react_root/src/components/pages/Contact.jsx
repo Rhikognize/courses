@@ -6,8 +6,8 @@ function Contact() {
 
   return (
     <div className="page-container">
-      <h1>{t('Contact')}</h1>
-      <p>{t('If you have any questions, feel free to reach out via email or our social media pages.')}</p>
+      <h1>{t('contact')}</h1>
+      <p>{t('contact_text')}</p>
       <p>+37368348146</p>
       <p>smoshell9@gmail.com</p>
       <p>TG : StasTBOI</p>

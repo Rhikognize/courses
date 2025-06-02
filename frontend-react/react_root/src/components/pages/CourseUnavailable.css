@@ -1,0 +1,26 @@
+.unavailable-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.unavailable-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.unavailable-container p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+    max-width: 30%;
+    height: auto;
+}

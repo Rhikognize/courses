@@ -6,8 +6,8 @@ function Privacy() {
 
   return (
     <div className="page-container">
-      <h1>{t('Privacy')}</h1>
-      <p>{t('We respect your privacy and do not collect personal data without your consent.')}</p>
+      <h1>{t('privacy')}</h1>
+      <p>{t('privacy_text')}</p>
     </div>
   );
 }

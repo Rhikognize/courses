@@ -12,7 +12,7 @@ function Navbar({ username }) {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const [ t ] = useTranslation();
+  const { t } = useTranslation();
 
  
 
@@ -45,7 +45,7 @@ const response = await fetch('http://localhost:8000/export-courses/');
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            {t('hello')},{username}.
+            {t('hello')} {username}
             
           </Link>
           <div className='menu-icon' onClick={handleClick}>

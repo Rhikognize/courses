@@ -4,7 +4,7 @@ const API_URL = 'http://localhost:8000/api/'
 
 export const register = async (username, password) => {
   const response = await axios.post(`${API_URL}register/`, { username, password });
-  localStorage.setItem('username', username);  // Store username
+  localStorage.setItem('username', username);  
   return response;
 };
 
